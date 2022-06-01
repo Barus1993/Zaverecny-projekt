@@ -1,0 +1,538 @@
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+/* -------------------mobilni  vzhled--------------------*/
+nav {
+  display: none;
+}
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #ACB992;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: #000000;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: none;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  color: #FFFFFF;
+  transition-duration: 0.4s;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #ACB992;
+  color: white;
+  font-family: "Arima Madurai", cursive;
+  color: #464E2E;
+  font-family: "Arima Madurai", cursive;
+}
+.active__color {
+  color: #FFFFFF !important;
+}
+
+body {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+body h2 {
+  font-size: 22px;
+  letter-spacing: 5px;
+  font-weight: 200;
+  margin: auto;
+  padding: 30px;
+  color: #464E2E;
+}
+body h3 {
+  font-size: 18px;
+  font-weight: 300;
+  padding: 15px;
+  margin: 0;
+}
+
+.main {
+  background-color: #ACB992;
+  padding: 15px;
+}
+.main h1 {
+  color: #464E2E;
+  font-family: "Arima Madurai", cursive;
+  font-weight: 300;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.main__altcolor {
+  color: #000000 !important;
+}
+.main__img {
+  max-width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  margin: 30px auto;
+  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.25));
+}
+.main__button {
+  display: block;
+  margin: auto;
+  text-decoration: none;
+  color: #FFFFFF;
+  width: 150px;
+  background-color: #464E2E;
+  text-align: center;
+  padding: 12px;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
+  transition-duration: 0.4s;
+}
+.main__button:hover {
+  filter: saturate(4);
+}
+
+.portfolio {
+  background-color: #E9E5D6;
+  padding: 30px 0;
+  display: grid;
+  row-gap: 30px;
+  justify-items: stretch;
+  justify-content: center;
+}
+.portfolio__card {
+  background-color: #FFFFFF;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
+  width: 282px;
+  height: 410px;
+  margin: auto;
+  position: relative;
+}
+.portfolio__item {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+.portfolio .price {
+  color: grey;
+  font-size: 22px;
+}
+.portfolio button {
+  display: block;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 300;
+  border: none;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #464E2E;
+  text-align: center;
+  padding: 10px 30px;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
+  transition-duration: 0.4s;
+}
+.portfolio button:hover {
+  filter: saturate(4);
+  cursor: pointer;
+}
+
+.aboutme {
+  background-color: #ACB992;
+  padding: 30px;
+  display: grid;
+  color: #FFFFFF;
+  line-height: 19px;
+  text-align: justify;
+}
+.aboutme .grid__column {
+  max-width: 450px;
+  margin: auto;
+}
+.aboutme__logo {
+  color: #464E2E;
+  font-family: "Arima Madurai", cursive;
+  font-size: 30px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.aboutme__logo__color {
+  color: #FFFFFF !important;
+}
+.aboutme__img {
+  max-width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  margin: 30px auto;
+  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.25));
+}
+
+.gallery {
+  background-color: #E9E5D6;
+  padding: 30px;
+  display: grid;
+}
+.gallery__button {
+  display: none;
+}
+.gallery__grid {
+  margin: auto;
+}
+.gallery__item {
+  max-width: 350px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  padding: 15px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "h2 h2 h2 h2" "form" "logo" "social social social" "copyright";
+  padding: 30px;
+  background-color: #ACB992;
+}
+.footer h2 {
+  color: #464E2E;
+  font-weight: 200;
+  letter-spacing: 5px;
+  justify-self: center;
+  grid-row: 1;
+  grid-column: 1/5;
+}
+.footer__logo {
+  display: block;
+  grid-row: 3;
+  grid-column: 1/5;
+  margin: 30px 0;
+  text-decoration: none;
+  align-self: center;
+  justify-self: center;
+  color: #464E2E;
+  font-family: "Arima Madurai", cursive;
+  font-size: 30px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition-duration: 0.4s;
+}
+.footer__logo:hover {
+  color: #FFFFFF;
+}
+.footer__logo__color {
+  color: #FFFFFF !important;
+}
+.footer .social {
+  justify-self: center;
+  align-self: center;
+  grid-row: 4;
+  transition-duration: 0.4s;
+}
+.footer .social:hover {
+  filter: invert(1);
+}
+.footer form {
+  grid-row: 2;
+  grid-column: 1/5;
+  justify-self: center;
+}
+.footer fieldset {
+  padding: 15px;
+  border: solid 1px #464E2E;
+  border-radius: 6px;
+  min-width: 300px;
+}
+.footer legend {
+  color: #464E2E;
+  font-size: 20px;
+  padding: 15px;
+}
+.footer .copyright {
+  justify-self: center;
+  align-self: center;
+  grid-row: 4;
+}
+.footer label {
+  display: none;
+}
+.footer input, .footer textarea {
+  padding: 0.5em;
+  border: solid 1px #464E2E;
+  background-color: #ACB992;
+  color: #FFFFFF;
+  display: block;
+  margin-top: 15px;
+  align-items: center;
+}
+.footer textarea {
+  min-width: 250px;
+}
+.footer ::-moz-placeholder {
+  color: #FFFFFF;
+}
+.footer :-ms-input-placeholder {
+  color: #FFFFFF;
+}
+.footer ::placeholder {
+  color: #FFFFFF;
+}
+.footer input[type=submit] {
+  background-color: #464E2E;
+  width: 150px;
+  padding: 10px;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
+  transition-duration: 0.4s;
+}
+.footer input[type=submit]:hover {
+  filter: saturate(4);
+}
+
+/* -----------------------------PC------------------------------- */
+@media (min-width: 1100px) {
+  .topnav {
+    display: none;
+  }
+
+  header {
+    padding: 30px;
+    background: linear-gradient(to right, #ACB992 0%, #ACB992 70%, #E9E5D6 70%, #E9E5D6 100%);
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 70px 70px 70px 70px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "logo link link link link button";
+    gap: 30px;
+    margin: 0 40px;
+  }
+  .menu__logo {
+    display: block;
+    text-decoration: none;
+    align-self: center;
+    justify-self: start;
+    color: #464E2E;
+    font-family: "Arima Madurai", cursive;
+    font-size: 30px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition-duration: 0.4s;
+  }
+  .menu__logo:hover {
+    color: #FFFFFF;
+  }
+  .menu__logo__color {
+    color: #FFFFFF !important;
+  }
+  .menu__link {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    align-self: center;
+    justify-self: center;
+  }
+  .menu__link:hover, .menu__link:active, .menu__link:focus {
+    color: #FFFFFF;
+  }
+  .menu__linkc {
+    color: #FFFFFF;
+    display: block;
+    text-decoration: none;
+    align-self: center;
+    justify-self: center;
+  }
+  .menu__button {
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
+    width: 150px;
+    background-color: #464E2E;
+    text-align: center;
+    padding: 15px;
+    align-self: center;
+    justify-self: end;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
+    transition-duration: 0.4s;
+  }
+  .menu__button:hover {
+    filter: saturate(4);
+  }
+
+  .main {
+    position: relative;
+    padding: 30px;
+    height: 700px;
+    background: linear-gradient(to right, #ACB992 0%, #ACB992 70%, #E9E5D6 70%, #E9E5D6 100%);
+  }
+  .main h1 {
+    position: absolute;
+    top: 50px;
+    left: -150%;
+    font-size: 55px;
+    letter-spacing: 10px;
+  }
+  .main__bgimg {
+    width: 350px;
+    height: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    background-color: #FFFFFF;
+    position: relative;
+    left: 60%;
+    top: 80px;
+  }
+  .main__img {
+    max-width: 340px;
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    margin: 0;
+    filter: contrast(75%);
+  }
+  .main__button {
+    position: absolute;
+    top: 235px;
+    left: -150%;
+  }
+
+  .portfolio {
+    grid-template-columns: repeat(4, 282px);
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    grid-template-rows: auto;
+    grid-template-areas: "h2" "portfolio__card portfolio__card portfolio__card portfolio__card";
+  }
+  .portfolio__card {
+    grid-row: 2;
+  }
+  .portfolio h2 {
+    grid-column: 2/4;
+  }
+
+  .aboutme {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .aboutme h2 {
+    grid-column: 1/3;
+  }
+  .aboutme .grid__column {
+    justify-self: end;
+  }
+  .aboutme__bgimg {
+    width: 350px;
+    height: 500px;
+    background-color: #FFFFFF;
+    position: relative;
+    left: 20%;
+  }
+  .aboutme__img {
+    width: 100%;
+    position: absolute;
+    -o-object-fit: contain;
+       object-fit: contain;
+    top: 50px;
+    margin: 0;
+  }
+
+  .gallery__grid {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: auto;
+    grid-template-areas: "h2 h2 h2" "item item item" "item item item";
+    justify-content: center;
+  }
+  .gallery #blur {
+    position: absolute;
+    transition-duration: 0.4s;
+  }
+  .gallery #blur:hover {
+    filter: blur(2px);
+  }
+  .gallery__link {
+    position: relative;
+  }
+  .gallery__button {
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 30px;
+    left: 36%;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+    padding: 8px 30px;
+  }
+  .gallery__button:hover {
+    cursor: pointer;
+    filter: blur(2px);
+  }
+
+  .footer {
+    grid-template-columns: 350px 1fr 50px 50px 50px;
+    grid-template-areas: "h2" "logo form social social social" "copyright";
+    background-color: #ACB992;
+  }
+  .footer h2 {
+    align-self: center;
+    grid-column: 2;
+  }
+  .footer__logo {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: end;
+    justify-self: end;
+    margin: 0;
+    line-height: 1;
+  }
+  .footer .social {
+    align-self: end;
+    margin-right: 100px;
+    grid-row: 2;
+  }
+  .footer form {
+    grid-column: 2;
+    margin-bottom: 1em;
+    min-width: 450px;
+  }
+  .footer .copyright {
+    justify-self: center;
+    align-self: center;
+    grid-column: 2/3;
+  }
+}/*# sourceMappingURL=style.css.map */

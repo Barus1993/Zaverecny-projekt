@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  },
+  "name": "projekt-zaverecny",
+  "version": "1.0.0",
+  "main": "fslightbox.js",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  },
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "keywords": [],
+  "author": "Barbora Buzkova",
+  "license": "ISC",
+  "description": "Zaverecny projekt"
+}

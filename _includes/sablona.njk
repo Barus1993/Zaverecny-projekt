@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+
+        <nav class="menu">
+            <a href="/" class="menu__logo"><span class="menu__logo__color">Painted</span> not Printed</a>
+            <a class="menu__link" href="/portfolio/">portfolio</a>
+            <a class="menu__link" href="/aboutme/">about me</a>
+            <a class="menu__link" href="/gallery/">gallery</a>
+            <a class="menu__link" href="/contact/">contact</a>
+            <a href="mailto:evaemrys@gmail.com" class="menu__button">Write me</a> 
+        </nav>
+
+            <!-- Mobile Navigation Menu -->
+        <div class="topnav">
+            <a href="/" class="active"><span class="active__color">Painted</span> not Printed</a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="/portfolio/" class="menu__link">portfolio</a>
+                <a href="/aboutme/" class="menu__link">about me</a>
+                <a href="/gallery/" class="menu__link">gallery</a>
+                <a href="/contact/" class="menu__link">contact</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+	</header>
+
+    <!-- Začátek Hlavní sekce-->
+
+    <main class="main">
+        <div class="main__bgimg">
+            <img class="main__img" src="/images/secret garden.jpg" alt="flower">
+            <h1>Painted not pr<span class="main__altcolor">inted</span></h1>
+            <a href="https://www.fler.cz/" class="main__button">Shop now</a>
+        </div>
+    </main>
+
+    <!-- Konec hlavní sekce -->
+
+    {{content | safe}}
+
+    <!-- Začátek Patičky -->
+
+    <footer class="footer">
+
+        <a href="/" class="footer__logo"><span class="footer__logo__color">Painted</span> not Printed</a>
+
+        <h2>Have any question? Contact me</h2>
+
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <fieldset>
+                <legend>Contact Eva</legend>
+
+                <label for="fullName">Your Name:</label>
+                <input type="text" name="fullName" id="fullName" required placeholder="Your name">
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required placeholder="Email">
+
+                <label for="msg">Message:</label>
+                <textarea name="msg" id="msg" rows="5" required placeholder="Your Message:"></textarea>
+                    
+                <input type="submit" id="submit" value="Send">
+            </fieldset>
+        </form>
+            
+            <a class="social" href="#"><img id="facebook" src="/images/facebook.png" alt="Facebook"></a>
+            <a class="social" href="#"><img id="instagram" src="/images/instagram.png" alt="Instagram"></a>
+            <a class="social" href="#"><img id="linkedin" src="/images/linkedin.png" alt="Linkedin"></a>
+
+        <div class="copyright">
+            &copy;2022, Barus
+        </div>
+    </footer>
+
+    <!-- Konec Patičky -->
+    <script src="/js/fslightbox.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "email",
+                Password : "password",
+                To : 'email',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Enquiry",
+                Body : "Name: " + document.getElementById("fullName").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Message: " + document.getElementById("msg").value
+            }).then(
+            message => alert("Message Sent Succesfully")
+            );
+        }
+    </script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
